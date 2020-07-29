@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<title>JS的数组</title>
+</head>
+<script>
+	//数组的定义
+		//字面量方式：
+			var a=[];//空数组
+			var arr=['a','b','c'];
+			document.write(arr); //可直接打印数组
+		//构造函数方式：
+			var a1=new Array(1,2,3,4,'h');
+	document.write("<br/>");
+	
+	
+	//获取数组长度
+		var L=a1.length;
+		document.write(L);
+
+
+
+	//数组里面可以包含数组：多维数组
+
+	var a2=[6,7,a1,'t'];//二维数组
+	var a3=[4,a2,'p'];//三维数组
+	document.write("<br/>");
+
+	//获取数组元素
+	var a4=['路飞','那么美',['巴基','小丑',['乔巴','索隆']]];
+	document.write(a4[2][1]);//->小丑
+	document.write("<br/>");
+	document.write(a4[2][2][0]);//->乔巴
+	document.write("<br/>");
+//遍历数组方式  只要控制循环变量<shuzu.length
+
+
+//求数组元素的和
+var a5=[1,2,3,4,12,99,80];
+var sum=0;
+for(var i=0;i<a5.length;i++){
+	sum+=a5[i];
+}
+document.write(sum);
+document.write("<br/>");
+
+//找数组中最大的值
+var a6=[1,5,8,99,23,56];
+var temp=0;
+for(var i=0;i<a6.length;i++){
+
+	if(temp<a6[i]){
+		temp=a6[i];
+	}
+}
+document.write(temp);
+document.write("<br/>");
+
+//数组元素以|分割
+var s='';
+for(var i=0;i<a6.length;i++){
+	s+=a6[i]+'|';
+}
+document.write(s);
+
+</script>
+</html>

@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>JS的this对象</title>
+</head>
+<body>
+</body>
+<script>
+
+	//this对象：
+		//在方法中的this 指的就是这个方法所在的对象
+/*
+	var obj2={
+			age:18,
+			sg:190,
+			name:'yh',
+			fun:function(){
+				var s=this.age; //获取这个对象中的属性值
+				document.write(s);
+			}
+		};
+		obj2.fun();
+
+		//普通函数中也是有this的 
+	function f(){
+		//document.write(this.a);//--->undefined
+		document.write(this);//-->指向全局对象（window）
+	}
+	f();
+
+
+*/
+
+	//this运行在哪个对象下，就指向哪个对象
+	k='678';
+	function funn(){
+		var k='89';
+		document.write(this.k);
+	}
+	var o1={
+		k:'123',
+		f:funn   //将函数当作值传入，此时f为函数
+	}
+	var o2={
+		k:'456',
+		f:funn
+	}
+	o1.f();
+	document.write("<br/>");
+	o2.f();//---- 》 123   456
+</script>
+</html>

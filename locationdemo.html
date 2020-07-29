@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>JS的location自动跳转页面案例</title>
+<style type="text/css">
+	p{
+		text-align:center;
+	}
+	#item{
+		color:red;
+	}
+</style>
+</head>
+<body>
+
+<p><span id="item">5</span>秒之后，自动跳转到首页...</p>
+
+</body>
+<script>
+
+	//倒计时读秒：
+		//方法：获取span标签 修改span标签 
+		//定时器：一秒调用一次方法
+		var second=5;
+		var time=document.getElementById("item");
+		function showTime(){
+			second--;
+			if(second<=0){
+				location.href="http://www.baidu.com";
+			}
+			
+			time.innerHTML=second+"";//修改页面中的内容
+		}
+
+		setInterval(showTime,1000);
+</script>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>JS的BOM对象的History对象</title>
+</head>
+<body>
+<input id="btn" type="button" value="获取历史记录个数">
+<br/>
+<a href="windowdemo.html">轮播图</a>
+<br/>
+<input id="forward" type="button" value="前进">
+
+</body>
+<script>
+
+	//history历史记录对象
+
+		//获取：window.history;  
+		//属性： length:返回当前窗口历史列表中的URL数量 不是整个浏览器的
+		//方法：back() 加载上一个url
+		//		forward()加载下一个url
+		//		go(参数) 加在某个具体页面 参数为正 表示前进几个历史记录  负数 表示后退几个历史记录
+	
+		var btn =document.getElementById("btn");
+		btn.onclick=function(){
+			var length=history.length;
+			alert(length);
+		}
+
+		var forward =document.getElementById("forward");
+		forward.onclick=function(){
+			//history.forward();或写为go
+			history.go(1);
+		}
+
+
+</script>
+</html>

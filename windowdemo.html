@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>window°¸Àý ÂÖ²¥Í¼</title>
+</head>
+<body>
+
+<img src="1.jpg" id="img" width="300px" height="300px">
+<input id="back" type="button" value="ºóÍË">
+
+</body>
+<script>
+	var number=1; 
+	function fun(){
+		//ÐÞ¸ÄÍ¼Æ¬srcÊôÐÔ
+		number++;
+		if(number>3){
+			number=1;
+		}
+		var img=document.getElementById("img");
+		img.src=number+".jpg";
+	}
+	setInterval(fun,3000);
+
+
+	var back =document.getElementById("back");
+		back.onclick=function(){
+			//history.back();
+			history.go(-1);
+		}
+</script>
+</html>

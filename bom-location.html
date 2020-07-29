@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>JS的BOM对象的Location对象</title>
+</head>
+<body>
+
+<input id="btn" type="button" value="刷新">
+<input id="baidu" type="button" value="跳转">
+</body>
+<script>
+
+//location 地址栏对象
+		//获取：window.lacation()    /   location
+
+
+		//刷新页面:reload 方法
+		var btn= document.getElementById("btn");
+		btn.onclick=function(){ //绑定单击事件
+			//刷新页面
+			location.reload();
+		}
+
+
+		//获取href 地址栏
+		var href =location.href;
+		alert(href);
+
+		//点击按钮访问其他官网
+		var baidu= document.getElementById("baidu");
+		baidu.onclick=function(){ //绑定单击事件
+			//刷新页面
+			location.href="http://www.baidu.com";
+		}
+
+</script>
+</html>

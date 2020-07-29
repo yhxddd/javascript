@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>JS的DOM对象中的事件绑定</title>
+</head>
+<body>
+	<img id="light" src="off.jpg" onclick="alert('我被点了！');"/><!-- onclick 也可以是<script>中定义的函数-->
+	<!--或 <img id="light" src="off.jpg" onclick="fun()"/> -->
+	<img id="light2" src="off.jpg" />
+</body>
+<script>
+	//事件：
+		//功能:某些组件执行了某些操作后，触发某些代码的执行
+		
+		//绑定属性：
+			//一直接在html标签上指定事件的属性，属性值就是js代码
+			//二通过获取元素对象 指定事件属性设置一个函数
+		
+		function fun(){
+			alert("我被点了");
+		}
+		function fun2(){
+			alert("你又点我");
+		}
+//二
+		var light2=document.getElementById("light2");
+		light2.onclick=fun2;
+
+</script>
+</html>

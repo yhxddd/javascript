@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>事件案例：电灯开关</title>
+</head>
+<body>
+<img id="light" src="off.jpg"/>
+</body>
+<script>
+/*
+	获取图片对象，绑定单击事件，每次点击切换图片
+*/
+
+	var light=document.getElementById("light");
+	var flag=false;//代表灯是灭的
+	light.onclick=function(){
+		if(flag){ //如果灯是开的，灭掉
+			light.src="off.jpg";
+			flag=false;
+		}
+		else{
+			light.src="on.jpg";
+			flag=true;
+		}
+	}
+</script>
+</html>

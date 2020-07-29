@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>JS的BOM对象中的window对象</title>
+</head>
+<body>
+<input id="open1" tyep="button" value="打开窗口">
+<input id="close1" tyep="button" value="关闭窗口">
+</body>
+<script>
+//Broeser Object Model 浏览器对象模型
+    //将浏览器各个组成部分封装成对象
+	   //Window：窗口对象  Navigator:浏览器对象  Screen：显示器对象 History ：历史记录对象 Location：地址栏对象
+
+
+
+//window 对象
+		//window不需要创建 可以直接使用： window.方法名()
+		//window y引用可以省略  方法名();
+
+		//alert("hhhhh");
+		//window.alert("hello");
+
+
+
+	//弹出窗口:
+		//alert一段消息一个确认按钮的警告框  
+		//confirm 一段消息两个按钮对话框 
+		//prompt可提示用户输入的对话框
+	/*	var flag=confirm("你确定退出吗");
+		if(flag){ //确认退出
+			alert("bye~");
+		}else{
+			alert("别乱点！");
+		}
+
+		var result=prompt("请输入用户名");
+		alert(result);
+			*/
+
+
+	//打开关闭有关的方法：
+		//open打开一个新窗口:返回一个新的window对象    
+		//close关闭浏览器窗口 谁调用我关谁
+		var open1=document.getElementById("open1");
+		var newWindow;
+		open1.onclick=function(){
+			//打开新窗口
+			newWindow=open("https://www.baidu.com");
+		}
+		var close1=document.getElementById("close1");
+		close1.onclick=function(){
+			//关闭新窗口
+			newWindow.close();
+		}
+	
+
+	//与定时器有关的方式
+		//setTimeout：在指定毫秒数后调用函数或计算表达式
+		//clearTimeout：取消由setTimeout设置的timeout
+		//setInterval：按照指定的周期(以毫秒计)来调用函数或计算表达式
+		//clearInterval：取消setInterval设置的timeout
+		//返回值：返回唯一标识，方便取消
+
+		//一次性定时器:两个参数：1.JS的方法或代码片段，2.毫秒值
+			//setTimeout("alert('boom');",2000);
+			//setTimeout("fun",2000);//方法对象引用 fun是fun()的对象
+			var id=setTimeout("fun();",2000);
+			function fun(){
+				alert("boom!!!");
+			}
+
+			clearTimeout(id);
+
+		//循环定时器
+			/*var id=setInterval(fun,2000);
+			clearInterval(id);*/
+	
+	//window对象的属性
+		//获取其他BOM对象：history  location  Navigator Screen  
+			var h1=window.history;
+			var h2=history;
+			alert(h1);
+			alert(h2);
+
+
+
+		//获取DOM 对象
+			//document文档对象
+			var open1=window.document.getElementById("open1");
+			//window.  省略
+</script>
+</html>

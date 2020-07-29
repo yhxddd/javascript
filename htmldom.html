@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>HTML DOM</title>
+
+<style>
+	.d1{
+		border:1px solid red;
+		width:100px;
+		height:100px;
+	}
+	.d2{
+		border:1px solid blue;
+		width:200px;
+		height:200px;
+	}	
+</style>
+</head>
+<body>
+
+<div id="div1"><!-- innerHTML的div-->
+	div1
+</div>
+
+
+<!--控制样式的div-->
+<div id="div2">
+	div2
+</div>
+
+<div id="div3">
+	div3
+</div>
+</body>
+<script>
+
+	//标签体的设置和获取: innerHTML
+	//使用HTML元素对象的属性
+	//控制样式
+
+	var div=document.getElementById("div1");
+	var innerHTML = div.innerHTML;
+	//alert(innerHTML); //显示div标签中间的文本  包括了换行和空格
+	//将div文本替换成输入框
+	//div.innerHTML="<input type='text'>";
+
+	//在div标签中追加一个文本输入框
+	div.innerHTML +="<input type='text'>";
+
+
+
+
+
+
+	//控制样式
+
+	var div2=document.getElementById("div2");
+	div2.onclick=function(){
+		
+		//修改样式方式1
+			div2.style.border="1px solid red";
+			div2.style.width="200px";
+			//font-size ---->写成fontSize
+			div2.style.fontSize="20px";
+
+
+		
+	}
+		
+	//修改样式方式2	:提前定义好类选择器的样式，再通过元素的className进行样式设置
+	var div3=document.getElementById("div3");
+	div3.onclick=function(){
+
+		div3.className="d2";
+     }
+</script>
+</html>

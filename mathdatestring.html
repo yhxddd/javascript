@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>JS的Math\Date\Array\String对象</title>
+</head>
+<body>
+</body>
+<script>
+//内置标准库中 经常使用得对象：
+	//Math对象
+		//绝对值
+/*		var n= -2;
+		var s=Math.abs(n);
+		document.write(s);
+		document.write("<br/>");
+		//取随机数
+		var r=Math.random();//产生（0，1）之间得随机数
+		document.write(r);
+		document.write("<br/>");
+		//向下取整：返回小于或等于一个给定数字的最大整数
+		var n1=Math.random()*10;
+		var n2=Math.floor(n1); //取（0，9）之间的随机整数
+		document.write(n2);
+		//取(n,m)之间的随机数
+		//Math.random()*(m-n)+n;
+document.write("<br/>");
+
+document.write("<hr/>");
+
+
+
+	//Date（日期）对象
+		//实例化构造函数获取时间对象
+			var da=new Date();
+			document.write(da);//现在时间
+			document.write("<br/>");
+			var n=Date.now();
+			document.write(n); //1970到现在过去的毫秒数
+			document.write("<br/>");
+			document.write(da.getHours());//获取小时
+			document.write("<br/>");
+			document.write(da.getDate());//获取今天几号
+			document.write("<br/>");
+			//JS中获取的月份是从0开始的
+			document.write(da.getMonth()+1);
+			document.write("<br/>");
+			document.write(da.getFullYear());//年份
+			document.write("<br/>");
+
+document.write("<hr/>");
+
+
+
+	//Array对象
+			var arr=[1,6,4,8,2,4];
+			document.write(arr.length);
+			document.write("<br/>");
+			var k=3;
+			arr.push(k);//在数组末尾增加节点
+			document.write(arr);
+			document.write("<br/>");
+			arr.pop();//删除数组中最后一个元素
+			document.write(arr);
+			document.write("<br/>");
+			//删除指定下标元素 但原数组不变
+			
+			document.write(arr.slice(2,4)); //返回的是被删除的元素 arr.slice(begin,end)删除时不包含end
+			document.write("<br/>");
+			document.write(arr);
+			document.write("<br/>");
+			//合并两个或多个数组 不改变原数组
+			var kk=['a','b','c'];
+			var h=arr.concat(kk); //返回一个新数组
+			document.write(arr);
+			document.write("<br/>");
+			document.write(h);
+			document.write("<br/>");
+
+			//将数组中的值转化为以分隔符隔开的字符串  不改变原数组
+			var s =arr.join("|"); //()中写分隔符 默认为逗号
+			document.write(s);
+		
+		document.write("<hr/>");
+
+
+*/
+
+	//String对象
+			 var str='abcdsfdfs';
+			 document.write(str.length);
+			 document.write("<br/>");
+			 var n=str.indexOf('f');//f出现的第一个位置
+			 document.write(n);
+			 document.write("<br/>");
+			 var d=str.substr(2,5);//从2号开始 长度为5截取字符
+			 document.write(d);
+			 document.write("<br/>");
+			 var sc='JavaScript';
+			 var i=sc.toLowerCase();//全部字符转为小写
+			 document.write(i);
+			 document.write("<br/>");
+			 var i=sc.toUpperCase();//全部转为大写
+			 document.write(i);
+			document.write("<br/>");
+			 var w=sc.replace('a','k');//将字符串中的第一个a替换为k
+			 document.write(w);
+
+</script>
+</html>

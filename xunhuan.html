@@ -1,0 +1,100 @@
+<html>
+
+<head>
+<title>JS的流程控制</title>
+</head>
+<script>
+//if语句
+/*
+var year=2016;
+if((year%4==0) && (year%100!=0)||(year%400==0)){
+	document.write("闰年");
+
+}else{
+	document.write("平年");
+}
+document.write("<br/>");
+//switch语句
+
+
+//while 
+var i=1,s=0;
+while(i<=100){
+	s+=i;
+	i++;
+}
+document.write(s);
+
+
+//do-while  先执行一次代码，在判断条件
+var j=10;
+do{
+	document.write("<br/>");
+	document.write(j);
+	j++;
+	
+}while(j<20);
+
+
+
+//for
+for(var i=0;i<10;i++){
+	document.write("<br/>");
+	document.write(i);
+}	
+var sum=0;
+for(var j=1;j<=100;j++){
+	sum+=j;
+}
+document.write("<br/>");
+document.write(sum);
+*/
+
+//打印正方形
+document.write("<br/>");
+var s="";
+for(var i=0;i<10;i++){
+	for(var h=0;h<10;h++){
+		s+="* ";
+	}
+	s+='\n';
+}
+console.log(s);
+
+//打印三角形
+document.write("<br/>");
+var s="";
+for(var i=0;i<10;i++){
+	for(var h=i;h<10;h++){
+		s+="* ";
+	}
+	s+='\n';
+}
+console.log(s);
+
+//99乘法表
+var str='';
+for(var i=1;i<=9;i++){
+	for(var j=1;j<=i;j++){
+		str += j+' * '+i+' = '+(i*j)+'\t';
+	}
+	str+='\n';
+}
+console.log(str);
+
+/*两种打印方式
+var str='';
+for(var i=1;i<=9;i++){
+	for(var j=i;j<=9;j++){
+		str += i+' * '+j+' = '+(i*j)+'\t';
+	}
+	str+='\n';
+}
+console.log(str);
+*/
+
+
+//continue 跳出本次循环 执行下一次循环
+//break 跳出整个循环
+</script>
+</html>

@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>JS的函数</title>
+</head>
+<body>
+</body>
+<script>
+	//函数的声明
+		//关键字声明：function 函数名(形参1,形参2...){函数体}
+				 // 函数名(实参1,实参2...);调用
+		//表达式声明：var f(函数名)=function(){函数体}
+
+/*
+	//函数的调用:函数名();
+		function f1(){
+			document.write(2);
+		}
+		f1();
+document.write("<br/>");
+
+
+	//匿名函数
+	var fun=function(){
+		document.write(66);
+	}
+	fun();
+	
+
+	//立即执行函数、自调用匿名函数
+	(function(){
+		alert(123);
+	})();
+
+
+	//函数也是一种数据类型
+	function fn(){
+	}
+	document.write(typeof fn);//--->function 数据类型-->对象（数组、函数）
+	document.write("<br/>");
+
+
+*/
+
+//函数被当作参数传入其他函数内部
+	/*
+	function f1(s){
+		s(); //如果s传入的是一个函数 ，就调用
+	}
+	var f2=function(){
+		document.write(444);
+	}
+	//f2 函数被当作值传入f1函数内  回调
+	f1(f2);*/
+/*
+	function f1(){
+		var a=10;
+		var f2=function(){
+			document.write(666);
+		}
+		return f2;
+	}
+	var k=f1();//闭包
+	k();
+document.write("<br/>");
+
+
+
+
+
+//变量提升: 在代码执行之前变量已经在编译阶段被声明了
+
+document.write(b); 
+//-> a已经被声明了 但未被赋值 所以为undefined
+var b=2;
+document.write("<br/>");
+
+
+
+
+//JS代码运行分两个阶段：
+//1 解析(编译)阶段：语法检查，变量及函数进行声明 
+//2 运行阶段：变量的赋值，代码流程的执行
+
+
+var a =12;
+function abc(){
+	alert(a);//->undefined 因为声明a是在全局，这里是局部使用，无法使用，但局部中又声明了 a ，进行了变量提升，所以是undefined
+	var a=10;  
+}
+abc();
+*/
+
+/*
+
+document.write(a);//包含一个变量提升
+function a(){
+	document.write('aaaa');
+}
+//如果函数与变量同名，那么函数声明回替换变量声明
+var a=1;
+document.write(a);
+//--->function a(){ document.write('aaaa'); } 1
+
+
+document.write("<br/>");document.write("<br/>");
+
+
+
+
+
+//因为赋值总在最后执行，所以不论函数声明在前在后 均会被修改为一个确定的值
+function c(){
+	document.write('cccc');
+}
+//如果函数与变量同名，那么函数声明回替换变量声明
+var c=5;
+document.write(c);
+//---->  5
+
+*/
+
+
+//作用域与作用域链
+
+var a=3;
+function f1(){
+	//var a=5 ---> 5
+	function f2(){
+		//var a=4;  //->  4
+		function f3(){
+			document.write(a);
+		}
+		f3();
+	}
+	f2();
+}
+f1();
+
+//在一个作用域中找一个变量，若未找到，自动去它的父级(上一层)作用域寻找,找不到继续寻找，直到全局作用域，若还找不到则直接报错    -----》作用域链
+</script>
+
+</html>

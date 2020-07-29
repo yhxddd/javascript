@@ -1,0 +1,91 @@
+<html>
+
+<head>
+<title>JS数据类型</title>
+</head>
+<body>
+</body>
+<script>
+//数值number、 字符串string 、布尔boolean 、undefined、  null、 对象object
+
+
+//双引号或单引号引起来的就是字符串
+//var kk="123"; //此时 “123”是字符串
+
+//引号包引号时 要使用转义字符 ->  \
+//var str='我\'喜欢\'  "你" ';
+//alert(str);
+
+//获取字符串长度 str.length
+//console.log(kk.length); //打印长度  chrome 浏览器开发者工具中有console
+
+
+//字符串拼接:+既可以作为数学运算使用，也可以字符串拼接
+	//从前往后进行运算 俩数均为数据类型则加法运算
+	//直到碰到一个字符串，此后所有+均作为字符串拼接
+	/*
+var s1="123";
+var s2='456';
+var s3=s1+s2;
+alert(s3);
+
+
+//类型转换
+
+	//其他类型转为字符串三种： toString()  String() 字符串拼接
+		//一
+		var n=5;
+		var s=n.toString();
+		console.log(typeof s);//typeof 为检测字符的类型 此时s为string类型的5
+			
+		//二
+		console.log(typeof String(n));
+
+
+		//三
+		var s=""+n;//自动将n装换为string
+		console.log(typeof s)
+
+		//其他类型转为字符串也可取上述三种方法
+
+
+
+	//其他类型转为数值类型：Number()   parseInt() parseFloat()
+
+		//若要将其他类型转为数值型 其他类型的数据也必须是数值  如“123” 虽然是字符串但是数据还是数字 否则 没有能力转为数值类型
+		//一
+		var a='1';
+		var b=Number(a);
+		console.log(typeof b);
+	
+		var c=Number('c');//字符串c不是数值 不能转为数值类型--->NaN :非数值型
+		var d=Number(null); //转为0
+		var e=Number(undefined);//---->NaN
+		console.log(c,d,e);
+		//二
+		var a=parseInt('2');
+		var b = parseInt('k23');
+		var c =parseInt(null);
+		var d=parseInt(undefined);  //除了'2'成功转换 其他均为NaN
+		console.log(a,b,c,d);
+
+		//三
+		var a=parseFloat('1.23df');--->1.23
+		var b=parseFloat('1,2,3,4');--->1.3
+		var c=paseFloat('h12');--->NaN
+		var d=parseFloat(null);--->NaN
+		var e=parseFloat(undedined);--->NaN
+		console.log(a,b,c,d,e);
+
+		*/
+
+	//其他类型转为布尔类型
+		//一
+		var a=Boolean('0');//-->true 字符串型有内容（不论内容） 即为true
+		var b=Boolean(0);//-->false  数值型
+		var c=Boolean('2');//-->true
+		var d = Boolean(null);//-->false
+		var e=Boolean(undefined);//-->false
+		var f=Boolean(' ');//-->false 字符串无内容
+</script>
+</html>

@@ -1,0 +1,83 @@
+<html>
+
+<head>
+<title>JS的对象及几个常用内置对象</title>
+</head>
+<body>
+</body>
+
+<script>
+/*
+//对象的声明：
+
+	//字面量声明对象：
+	var obj1={};//空对象
+	var obj2={age:12,sg:190,name="hanpi",fei:function(){}};
+	//对象中的数据都是以键值承兑存在的，通常来说，值是函数的则称为方法，其他类型的值都是属性（一般来说JS没有方法只有属性 但是可以这么看）
+
+	//实例化方式声明对象（内置构造函数）：
+	var obj3=new Object();
+
+	//实例化自定义构造函数方式声明对象：
+	function fun(){
+	}
+	var f=new fun();
+	
+
+
+
+	var obj1={
+		age:12,
+		sg:190,
+		name:'yh',
+		fei:function(){
+			document.write(5);
+		}
+	};
+	//获取对象的属性或方法：  对象.属性名
+	document.write(obj1.age);
+	document.write("<br/>");
+	obj1.fei();
+	document.write("<br/>");
+
+
+*/
+
+
+
+
+/*
+//遍历对象  for...in
+var o1={
+	name:'路飞',
+	age:18,
+	sex:'男'
+}
+//for(键 in 对象){...}  不仅可以循环遍历对象还可以遍历数组
+for(var k in o1){
+	document.write(o1[k]);
+	document.write("<br/>");
+}
+console.log(o1);
+delete o1.age;
+console.log(o1); //s删除o1得age属性
+*/
+
+
+
+//包装对象
+//三种原始类型：数值、字符串、布尔  
+//原始类型可以在一定条件下自动转为对象 这就是包装对象
+
+//var v1=new Number(123);//此时v1就已经相当于是一个对象了
+//console.log(v1); //-->Number{123}
+//原始值可以自动当作对象来调用 各种属性和方法   原始包装对象使用完成，会自动立即销毁
+
+
+document.write("<hr/>");
+
+
+
+
+</script>
+</html>
